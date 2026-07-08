@@ -1,11 +1,11 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
   "scripts": {
     "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/index.ts",
     "build": "drizzle-kit generate && tsc",
     "db:generate": "drizzle-kit generate",
@@ -13,11 +13,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "dependencies": {
+    "@base-app/shared": "workspace:*",
     "@better-auth/expo": "^1.6.23",
     "@hono/node-server": "^2.0.8",
     "@hono/standard-validator": "^0.2.3",
