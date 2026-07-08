@@ -1,7 +1,7 @@
 // api/src/lib/email.ts
 import "dotenv/config";
 import { Resend } from "resend";
-import { APP_NAME } from "../../../../packages/shared/src/constants/APP_DATA.js";
+import { APP_NAME } from "@shared/src/constants/APP_DATA.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
